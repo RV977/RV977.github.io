@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitud de Reparación de Motocicleta</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            width: 90%;
+            max-width: 500px;
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            text-align: center;
+        }
+        form {
+            margin-top: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+        }
+        input[type="text"], input[type="email"], input[type="tel"], textarea, select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: block;
+            width: 100%;
+            font-size: 16px;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Solicitud de Reparación de Motocicleta</h1>
+    <form action="#" method="POST">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="telefono">Teléfono:</label>
+        <input type="tel" id="telefono" name="telefono" required>
+
+        <label for="marca">Marca de la moto:</label>
+        <input type="text" id="marca" name="marca" required>
+
+        <label for="modelo">Modelo de la moto:</label>
+        <input type="text" id="modelo" name="modelo" required>
+
+        <label for="descripcion">Descripción de la reparación:</label>
+        <textarea id="descripcion" name="descripcion" rows="4" required></textarea>
+
+        <label for="prioridad">Prioridad:</label>
+        <select id="prioridad" name="prioridad">
+            <option value="baja">Baja</option>
+            <option value="media">Media</option>
+            <option value="alta">Alta</option>
+        </select>
+
+        <label>¿Preferencia de contacto?</label>
+        <label><input type="checkbox" name="contacto[]" value="email"> Correo electrónico</label>
+        <label><input type="checkbox" name="contacto[]" value="telefono"> Teléfono</label>
+
+        <label>¿Tipo de reparación?</label>
+        <label><input type="radio" name="tipo" value="mantenimiento" checked> Mantenimiento</label>
+        <label><input type="radio" name="tipo" value="reparacion"> Reparación</label>
+        <label><input type="radio" name="tipo" value="personalizacion"> Personalización</label>
+
+        <input type="submit" value="Enviar Solicitud">
+    </form>
+</div>
+
+</body>
+</html>
+

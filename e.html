@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        .container {
+            display: flex;
+            overflow: hidden;
+            white-space: nowrap;
+            margin: 20px auto;
+            width: 80%;
+        }
+
+        .galeria {
+            flex: 0 0 auto;
+            width: 100%;
+            transition: transform 1s ease-in-out;
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        .foto {
+            text-align: center;
+        }
+
+        .foto img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .pie {
+            padding: 10px;
+            background-color: #f0f0f0;
+            text-align: center;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <ul>
+        <li><a href="index.html"><i class="fas fa-home"></i> Pantalla de inicio</a></li>
+    </ul>
+</nav>
+
+<div class="container">
+    <div class="galeria">
+        <div class="foto">
+            <img src="images.jpg" alt="">
+        </div>
+        <div class="pie">
+        </div>
+    </div>
+    <div class="galeria">
+        <div class="foto">
+            <img src="descarga.jpg" alt="">
+        </div>
+        <div class="pie">
+        </div>
+    </div>
+    <div class="galeria">
+        <div class="foto">
+            <img src="mmm.jpg" alt="">
+        </div>
+        <div class="pie">
+        </div>
+    </div>
+    <div class="galeria">
+        <div class="foto">
+            <img src="mm.jpg" alt="">
+        </div>
+        <div class="pie">
+        </div>
+    </div>
+    <div class="galeria">
+        <div class="foto">
+            <img src="m.png" alt="">
+        </div>
+        <div class="pie">
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2024 Taller de Motos. Todos los derechos reservados.</p>
+</footer>
+
+<script>
+    // Función para mover las imágenes automáticamente
+    function moverImagenes() {
+        const galerias = document.querySelectorAll('.galeria');
+        let currentIdx = 0;
+
+        setInterval(() => {
+            galerias[currentIdx].style.transform = 'translateX(-100%)';
+            currentIdx = (currentIdx + 1) % galerias.length;
+            galerias[currentIdx].style.transform = 'translateX(0)';
+        }, 3000); // Cambiar cada 3 segundos (3000 milisegundos)
+    }
+
+    // Llamar a la función al cargar la página
+    window.onload = moverImagenes;
+</script>
+
+</body>
+</html>

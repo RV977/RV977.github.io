@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taller de Motos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #f20000; 
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #0024f1; 
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: rgba(255, 255, 255, 0.378);
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 20px;
+        }
+
+        .marquesina {
+            overflow: hidden;
+            white-space: nowrap;
+            animation: marquee 10s linear infinite;
+        }
+
+        @keyframes marquee {
+            0%   { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+
+        .frame {
+            width: 30%;
+            height: 400px;
+            border: 2px solid black;
+            margin: 0 10px;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #5d5a5a;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .responsive-img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .transparent {
+            opacity: 0.7;
+        }
+
+        .animation {
+            animation: fadein 2s;
+        }
+
+        @keyframes fadein {
+            from { opacity: 0; }
+            to   { opacity: 1; }
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05);
+        }
+
+        .gallery-item a {
+            display: block;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .image-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .image-overlay h3 {
+            margin: 0;
+            font-size: 1.5em;
+        }
+
+        .image-overlay p {
+            margin: 5px 0;
+            font-size: 1.2em;
+        }
+
+        .gallery-item:hover .image-overlay {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Taller de Motos</h1>
+</header>
+
+<nav>
+    <div class="dropdown">
+        <span>Opciones</span>
+        <div class="dropdown-content">
+            <a href="o.html">Contacto</a><br>
+            <a href="Jochas.html">Servicios</a><br>
+        </div>
+    </div>
+</nav>
+
+<div class="marquesina">
+    <h2>¡Bienvenido al taller de motos!</h2>
+</div>
+
+<div class="container">
+    <div class="gallery">
+        <div class="gallery-item">
+            <a href="e.html">
+                <img src="images.jpg" alt="Imagen 1">
+                <div class="image-overlay">
+                    <h3>Detalle Imagen 1</h3>
+                    <p>Ver más detalles</p>
+                </div>
+            </a>
+        </div>
+        <div class="gallery-item">
+            <a href="c.html">
+                <img src="d.gif" alt="Imagen 2">
+                <div class="image-overlay">
+                    <h3>Detalle Imagen 2</h3>
+                    <p>Ver más detalles</p>
+                </div>
+            </a>
+        </div>
+        <div class="gallery-item">
+            <a href="detalle3.html">
+                <img src="descarga.jpg" alt="Imagen 3">
+                <div class="image-overlay">
+                    <h3>Detalle Imagen 3</h3>
+                    <p>Ver más detalles</p>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2024 Taller de Motos. Todos los derechos reservados.</p>
+</footer>
+
+</body>
+</html>
